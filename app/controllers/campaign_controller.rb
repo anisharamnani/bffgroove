@@ -29,7 +29,7 @@ class CampaignController < ApplicationController
       @rabl = "campaign/graph-times.json.rabl"
     end
     @yaxis = params[:yaxis]
-    @campaigns = Campaign.order(:send_date).reverse.first(120) # this isn't a certain number of days
+    @campaigns = Campaign.date_range(params[:from], params[:to])
 
     sorted_temp = []
     @sorted_final = []
