@@ -20,7 +20,6 @@ class CampaignController < ApplicationController
   end
 
   def graph
-    debugger
     if params[:xaxis] == "Weekdays"
       @xaxis = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
       @rabl = "campaign/graph-weekdays.json.rabl"

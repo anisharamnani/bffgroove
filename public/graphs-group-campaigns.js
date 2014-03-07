@@ -8,7 +8,7 @@ $(document).ready(function() {
 
   $(".dropdown.yaxis a").click(function(e){
     e.preventDefault();
-    $(".row.inline-dropdown-wrapper.smaller-width").fadeTo("slow" , 0.5);
+    $(".row.inline-dropdown-wrapper.smaller-width").fadeTo("slow" , 0.3);
     yAxisInputPretty = $(this).text();
 
     function capitalize(string) {
