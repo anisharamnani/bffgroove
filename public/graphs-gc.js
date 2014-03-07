@@ -6,7 +6,7 @@ $(document).ready(function() {
     $(this).fadeTo("fast" , 1);
   });
 
-  $(".dropdown a").click(function(e){
+  $(".dropdown.yaxis a").click(function(e){
     e.preventDefault();
     $(".row.inline-dropdown-wrapper.smaller-width").fadeTo("slow" , 0.5);
     yAxisInputPretty = $(this).text();
