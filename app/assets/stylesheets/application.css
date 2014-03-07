@@ -39,9 +39,13 @@ button, .btn, li, .inline-dropdown-text, h3, h1 {
 h1 {
   margin-top: -50px;
 }
-h1.graphs, h3.graphs, h1.home {
+h1.graphs, h1.home {
   text-align: center;
   margin-top: 30px;
+}
+h3.graphs {
+  text-align: center;
+  margin-top: 10px;
 }
 h1.home {
   color: white;
@@ -92,13 +96,15 @@ table, th, td {
   margin-bottom: 50px;
 }
 .tableGroupCampaigns.handsontable {
-  width: 354px;
+  width: 800px;
 }
 .tableGroupCampaigns{
   height: 600px;
   overflow: scroll;
   width: inherit;
-  margin: 20px 0px 50px 100px;
+  margin: 20px 0px 100px -80px;
+  margin-top: 20px;
+  margin-bottom: 100px;
 }
 .tableGroupCampaign {
   margin: 15px auto 10px auto;

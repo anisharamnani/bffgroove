@@ -12,5 +12,4 @@ end
       end
     end
   end
-  @sorted_final.delete_at(i)
 end
