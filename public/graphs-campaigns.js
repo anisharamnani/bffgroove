@@ -29,7 +29,7 @@ $(document).ready(function() {
     yAxisInput = yAxisInputPretty.replace(" ", "_").toLowerCase();
 
     $("h1.graphs").text("Campaigns by " + yAxisInputPretty);
-    $("h3.graphs").text("(viewing " + from + " - " + to + ")");
+    $("h3.graphs").text("(" + from + " to " + to + ")");
 
     var margin = {top: 20, right: 20, bottom: 30, left: 40},
         width = 960 - margin.left - margin.right,
