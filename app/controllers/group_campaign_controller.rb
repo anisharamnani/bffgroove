@@ -28,7 +28,7 @@ class GroupCampaignController < ApplicationController
 
     sorted_temp = []
     @sorted_final = []
-
+    debugger
     @group_campaigns.each do |group_campaign|
       @sorted_final = (sorted_temp << group_campaign[@yaxis].to_f).sort.reverse
     end
