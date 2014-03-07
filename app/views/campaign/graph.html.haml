@@ -1,4 +1,4 @@
-.row.inline-dropdown-wrapper
+.row.inline-dropdown-wrapper 
   .inline-dropdown-text Make a bar chart! First...
   %script{:src=>"../graphs-campaigns.js", :type=>"text/javascript"}
   %div{:class=>"dropdown inline-dropdown xaxis"}
@@ -20,6 +20,7 @@
         %a{:role=>"menuitem", :tabindex=>"-1", :href=>"#"} Revenue Created
       %li{:role=>"presentation"} 
         %a{:role=>"menuitem", :tabindex=>"-1", :href=>"#"} Unsubscribes
+  = render 'campaign/graphform'
 %h1.graphs
 %h3.graphs
 .svg-wrapper
