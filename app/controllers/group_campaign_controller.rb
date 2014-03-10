@@ -22,13 +22,11 @@ class GroupCampaignController < ApplicationController
   end
 
   def graph
-    # @group_campaigns = GroupCampaign.order(:send_date).reverse.first(30) # this isn't a certain number of days
     @weekdays = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
     @yaxis = params[:yaxis]
 
     sorted_temp = []
     @sorted_final = []
-
     @group_campaigns = GroupCampaign.date_range(params[:from], params[:to])
     @group_campaigns.each do |group_campaign|
       @sorted_final = (sorted_temp << group_campaign[@yaxis].to_f).sort.reverse
