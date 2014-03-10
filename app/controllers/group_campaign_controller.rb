@@ -22,6 +22,7 @@ class GroupCampaignController < ApplicationController
   end
 
   def graph
+    debugger
     @weekdays = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
     @yaxis = params[:yaxis]
 
@@ -37,6 +38,7 @@ class GroupCampaignController < ApplicationController
       format.json { render "group_campaign/graph.json.rabl" }
     end
   end
+
 
 
 end

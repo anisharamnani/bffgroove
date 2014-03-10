@@ -24,6 +24,12 @@ class GroupCampaign < ActiveRecord::Base
     self.send_weekday = self.campaigns.order(:send_date)[0].send_weekday
   end
 
+  def self.date_range(from,to)
+    date_gc_from = from.to_s + "T00:00:00Z"
+    date_gc_to = to.to_s + "T23:59:59Z"
+    group_campaigns = GroupCampaign.where(:send_date => date_gc_from..date_gc_to)
+  end
+
   def self.to_csv
     CSV.generate do |csv|
       csv << column_names
