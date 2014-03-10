@@ -39,13 +39,18 @@ button, .btn, li, .inline-dropdown-text, h3, h1 {
 h1 {
   margin-top: -50px;
 }
-h1.graphs, h1.home {
+h1.home {
   text-align: center;
   margin-top: 30px;
+}
+h1.graphs {
+  text-align: center;
+  margin-top: 80px;
 }
 h3.graphs {
   text-align: center;
   margin-top: 10px;
+  color: #b8b8b8;
 }
 h1.home {
   color: white;
@@ -143,8 +148,9 @@ table, th, td {
   margin: 20px auto;
 }
 #datepicker {
-  margin-bottom: 20px;
   padding-top: 10px;
+  width: 430px;
+  margin: 0 auto 20px auto;
 }
 .ui-widget-header {
   border: 1px solid #dddddd;

@@ -8,9 +8,9 @@ This is a data managing tool for a company so that they can view email analytics
   Get MailChimp username, password, and api key from company, save it in config/application.yml file
   In the rails console (rails c), run the following commands (in this order)
     List.import_lists
-    templist = List.create(:name=>"No list")
-    templist.id = 0
-    templist.save!
+    noList = List.create(:name=>"No list") # this is for campaigns who do not have a list
+    noList.id = 0
+    noList.save!
     Campaign.import_response
     Campaign.group_campaigns
     GroupCampaign.aggregate
