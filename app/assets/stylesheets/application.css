@@ -74,6 +74,9 @@ h1.home {
 .smaller-width {
   width: 400px;
 }
+.smaller-width-group-campaign {
+  width: 340px;
+}
 .svg-wrapper {
   width: 960px;
   margin: 0 auto;
@@ -165,6 +168,9 @@ border: 0px;
 background: white;
 font-weight: bold;
 color: #0073ea;
+}
+.form-wrapper {
+  margin-left: -40px;
 }
 /* OTHER */
 .hide-me {
