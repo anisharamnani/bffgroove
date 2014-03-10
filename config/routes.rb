@@ -16,7 +16,7 @@ BFFGroove::Application.routes.draw do
   get '/campaigns/date?from=:from&to=:to' => 'campaign#date'
   get '/campaigns/graphs' => 'campaign#graph'
   get '/group_campaigns/graphs' => 'group_campaign#graph'
-  get '/group_campaigns/graph/:yaxis' => 'group_campaign#graph'
+  # get '/group_campaigns/graph/:yaxis' => 'group_campaign#graph'
   get '/group_campaigns'=> 'group_campaign#index'
   get '/group_campaigns/:id' => 'group_campaign#show'
   

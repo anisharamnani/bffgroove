@@ -6,8 +6,11 @@ $(document).ready(function() {
     $(this).fadeTo("fast" , 1);
   });
 
-  $(".dropdown.yaxis a").click(function(e){
+  $("#dateGraph").click(function(e){
     e.preventDefault();
+    var from = $('#from').val();
+    var to = $('#to').val();
+
     $(".row.inline-dropdown-wrapper.smaller-width").fadeTo("slow" , 0.5);
     yAxisInputPretty = $(this).text();
 
@@ -53,7 +56,7 @@ $(document).ready(function() {
       .append("g")
         .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-    d3.json("/group_campaigns/graph/" + yAxisInput + ".json", function(error, data) {
+    d3.json("/group_campaigns/graphs.json?&yaxis=" + yAxisInput + "&from=" + from + "&to=" + to, function(error, data) {
       // returns keys, makes them for side bar
       response = data;
       // grouping each of the bars
