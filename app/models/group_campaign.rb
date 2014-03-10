@@ -20,8 +20,8 @@ class GroupCampaign < ActiveRecord::Base
   end
 
   def calculate_send_date
-    self.send_date = self.campaigns.order(:send_date)[0].send_date
-    self.send_weekday = self.campaigns.order(:send_date)[0].send_weekday
+    self.send_date = self.campaigns.order(:send_date).last.send_date
+    self.send_weekday = self.campaigns.order(:send_date).last.send_weekday
   end
 
   def self.date_range(from,to)
