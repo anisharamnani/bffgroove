@@ -152,6 +152,10 @@ table, th, td {
   width: 430px;
   margin: 0 auto 20px auto;
 }
+input#from.hasDatepicker, input#to.hasDatepicker {
+  width: 154px;
+  height: 26px;
+}
 .ui-widget-header {
   border: 1px solid #dddddd;
   background: #f6f6f6 url(images/ui-bg_highlight-soft_100_f6f6f6_1x100.png) 50% 50% repeat-x;
