@@ -22,7 +22,6 @@ class GroupCampaignController < ApplicationController
   end
 
   def graph
-    debugger
     @weekdays = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
     @yaxis = params[:yaxis]
 
@@ -32,7 +31,6 @@ class GroupCampaignController < ApplicationController
     @group_campaigns.each do |group_campaign|
       @sorted_final = (sorted_temp << group_campaign[@yaxis].to_f).sort.reverse
     end
-
     respond_to do |format|
       format.html
       format.json { render "group_campaign/graph.json.rabl" }

@@ -6,13 +6,17 @@ $(document).ready(function() {
     $(this).fadeTo("fast" , 1);
   });
 
+  $(".yaxis a").click(function(e){
+    e.preventDefault();
+    yAxisInputPretty = $(this).text();
+  });
+
   $("#dateGraph").click(function(e){
     e.preventDefault();
     var from = $('#from').val();
     var to = $('#to').val();
 
     $(".row.inline-dropdown-wrapper.smaller-width").fadeTo("slow" , 0.5);
-    yAxisInputPretty = $(this).text();
 
     function capitalize(string) {
       return string.charAt(0).toUpperCase() + string.slice(1);
