@@ -19,21 +19,23 @@ class CampaignController < ApplicationController
   end
 
   def graph
-    if params[:xaxis] == "Weekdays"
-      @xaxis = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
-      @rabl = "campaign/graph-weekdays.json.rabl"
-    elsif params[:xaxis] == "Times"
-      @xaxis = ["9AM - 10AM", "11AM - 12PM", "1PM - 2PM", "3PM - 4PM", "5PM - 6PM", "7PM - 8PM"]
-      @rabl = "campaign/graph-times.json.rabl"
-    end
-    @yaxis = params[:yaxis]
-    @campaigns = Campaign.date_range(params[:from], params[:to])
+    if params[:yaxis]
+      if params[:xaxis] == "Weekdays"
+        @xaxis = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
+        @rabl = "campaign/graph-weekdays.json.rabl"
+      elsif params[:xaxis] == "Times"
+        @xaxis = ["9AM - 10AM", "11AM - 12PM", "1PM - 2PM", "3PM - 4PM", "5PM - 6PM", "7PM - 8PM"]
+        @rabl = "campaign/graph-times.json.rabl"
+      end
+      @yaxis = params[:yaxis]
+      @campaigns = Campaign.date_range(params[:from], params[:to])
 
-    sorted_temp = []
-    @sorted_final = []
+      sorted_temp = []
+      @sorted_final = []
 
-    @campaigns.each do |campaign|
-      @sorted_final = (sorted_temp << campaign[@yaxis].to_f).sort.reverse
+      @campaigns.each do |campaign|
+        @sorted_final = (sorted_temp << campaign[@yaxis].to_f).sort.reverse
+      end
     end
 
     respond_to do |format|

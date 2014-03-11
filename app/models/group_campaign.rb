@@ -25,8 +25,8 @@ class GroupCampaign < ActiveRecord::Base
   end
 
   def self.date_range(from,to)
-    date_gc_from = from.to_s + "00:00:00 UTC"
-    date_gc_to = to.to_s + "23:59:59 UTC"
+    date_gc_from = from.to_s
+    date_gc_to = to.to_s
     group_campaigns = GroupCampaign.where(:send_date => date_gc_from..date_gc_to)
   end
 
