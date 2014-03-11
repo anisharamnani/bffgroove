@@ -171,6 +171,7 @@ $(document).ready(function() {
           .attr("dy", ".5em")
           .html("Campaign Data");
 
+      $(".graph-btn").attr("display", "inline-block");
     });
   });
 });

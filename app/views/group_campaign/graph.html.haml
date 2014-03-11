@@ -1,3 +1,26 @@
+%button.btn.btn-default.btn-lg.graph-modal{"data-target" => "#myModal", "data-toggle" => "modal"}
+  ?
+
+#myModal.modal.fade{"aria-hidden" => "true", "aria-labelledby" => "myModalLabel", :role => "dialog", :tabindex => "-1"}
+  .modal-dialog
+    .modal-content
+      .modal-header
+        %button.close{"aria-hidden" => "true", "data-dismiss" => "modal", :type => "button"}
+          \&times;
+        %h4#myModalLabel.modal-title
+          Reading & Using This Graph
+      .modal-body
+        This graph is made custom based on the options you choose--Y axis and date range. The bars in each category (weekday) are stacked like stairs: Instead of looking at the bars head-on, like a clustered bar chart, the bars have been turned sideways so you are seeing them from lowest to highest.
+        %br
+        %br
+        Note that if you choose a very small date range (say, less than one week), the bars will look a little funky!
+        %br
+        %br
+        Warning! This may not actually be the most reliable graph, and here's why: A Group Campaign's (GC) "send date" and "send weekday" are set based on when the most recent Campaign (C) based off of that GC was sent. So, let's say that a C based off of the GC "Bully Stick Sale" was sent in February, but there was also a C based off of that same GC sent in September. Now, let's say you choose to view a custom bar chart of GCs from February to March. The data on that bar chart will contain all GCs' data whose most recent send dates were between February and March, but it does <strong>not</strong> exclude the data of any Cs that are also a part of that GC that did <strong>not</strong> occur between February and March. So, it's not entirely inaccurate, but it may contain aggregate data from previous months. If you want to be sure that you're only seeing data within a specific time frame, making a custom Campaign chart is the way to go!
+      .modal-footer
+        %button.btn.btn-primary{"data-dismiss" => "modal", :type => "button"}
+          Got it.
+
 .row.inline-dropdown-wrapper.smaller-width-group-campaign
   .inline-dropdown-text Make a bar chart!
   %script{:src=>"../graphs-group-campaigns.js", :type=>"text/javascript"}
