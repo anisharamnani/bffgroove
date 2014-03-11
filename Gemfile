@@ -7,6 +7,7 @@ gem 'rails', '3.2.16'
 
 group :production do
   gem 'pg'
+  gem 'active_record'
 end
 
 gem 'devise'
