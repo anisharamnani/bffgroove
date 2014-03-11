@@ -1,10 +1,10 @@
 class ChangeColTypeForListsInCGc < ActiveRecord::Migration
   def up
     execute <<-SQL
-      sp_RENAME 'campaigns.list', 'list_id', 'COLUMN';
+      EXEC sp_RENAME 'campaigns.list', 'list_id', 'COLUMN';
       ALTER TABLE campaigns
       ALTER COLUMN list_id TYPE int;
-      sp_RENAME 'group_campaigns.list', 'list_id', 'COLUMN';
+      EXEC sp_RENAME 'group_campaigns.list', 'list_id', 'COLUMN';
       ALTER TABLE group_campaigns
       ALTER COLUMN list_id TYPE int
     SQL
