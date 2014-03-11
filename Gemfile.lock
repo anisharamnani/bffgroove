@@ -135,6 +135,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  activerecord
   coffee-rails (~> 3.2.1)
   devise
   figaro
