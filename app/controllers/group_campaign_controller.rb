@@ -22,15 +22,18 @@ class GroupCampaignController < ApplicationController
   end
 
   def graph
-    @weekdays = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
-    @yaxis = params[:yaxis]
+    if params[:yaxis]
+      @weekdays = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
+      @yaxis = params[:yaxis]
 
-    sorted_temp = []
-    @sorted_final = []
-    @group_campaigns = GroupCampaign.date_range(params[:from], params[:to])
-    @group_campaigns.each do |group_campaign|
-      @sorted_final = (sorted_temp << group_campaign[@yaxis].to_f).sort.reverse
+      sorted_temp = []
+      @sorted_final = []
+      @group_campaigns = GroupCampaign.date_range(params[:from], params[:to])
+      @group_campaigns.each do |group_campaign|
+        @sorted_final = (sorted_temp << group_campaign[@yaxis].to_f).sort.reverse
+      end
     end
+    
     respond_to do |format|
       format.html
       format.json { render "group_campaign/graph.json.rabl" }
