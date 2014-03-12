@@ -15,6 +15,7 @@ gem 'devise'
 gem 'haml'
 gem 'jbuilder'
 gem 'httparty'
+gem 'random_data'
 
 group :development do
   gem 'sqlite3'
