@@ -218,3 +218,7 @@ color: #0073ea;
 .modal-dialog {
   margin-top: 120px;
 }
+.notice {
+  position: absolute;
+  margin-left: 20px;
+}
