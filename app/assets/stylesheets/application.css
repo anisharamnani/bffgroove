@@ -113,15 +113,13 @@ table, th, td {
   margin-bottom: 50px;
 }
 .tableGroupCampaigns.handsontable {
-  width: 800px;
+  width: 410px;
 }
 .tableGroupCampaigns{
   height: 600px;
   overflow: scroll;
   width: inherit;
-  margin: 20px 0px 100px -80px;
-  margin-top: 20px;
-  margin-bottom: 100px;
+  margin: 20px auto 100px auto;
 }
 .tableGroupCampaign {
   margin: 15px auto 10px auto;
