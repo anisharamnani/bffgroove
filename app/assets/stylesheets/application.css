@@ -113,13 +113,15 @@ table, th, td {
   margin-bottom: 50px;
 }
 .tableGroupCampaigns.handsontable {
-  width: 410px;
+  width: 800px;
 }
 .tableGroupCampaigns{
   height: 600px;
   overflow: scroll;
   width: inherit;
-  margin: 20px auto 100px auto;
+  margin: 20px 0px 100px -80px;
+  margin-top: 20px;
+  margin-bottom: 100px;
 }
 .tableGroupCampaign {
   margin: 15px auto 10px auto;
@@ -217,8 +219,4 @@ color: #0073ea;
 }
 .modal-dialog {
   margin-top: 120px;
-}
-.notice {
-  position: absolute;
-  margin-left: 20px;
 }
