@@ -1,5 +1,5 @@
 class CampaignController < ApplicationController
-  before_filter :authenticate_user!, :except => [:home]
+  # before_filter :authenticate_user!, :except => [:home]
 
   def index
     @campaigns = Campaign.order(:send_date).reverse.first(200)
