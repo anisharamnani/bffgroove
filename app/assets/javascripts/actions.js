@@ -1,5 +1,10 @@
 $(document).ready(function() {
 
+  // load warning for date-range pages
+  $(window).load(function(){
+      $('.warning-modal').modal('show');
+  });
+
   function strip_tags(input, allowed){
     allowed = (((allowed || "") + ""). toLowerCase().match(/<[a-z][a-z0-9]*>/g) || []).join('');
     var tags = /<\/?([a-z][a-z0-9]*)\b[^>]*>/gi, commentsAndPhpTags = /<!--[\s\S]*?-->|<\?(?:php)?[\s\S]*?\?>/gi;

@@ -1,3 +1,17 @@
+#myModal.modal.fade.warning-modal{"aria-hidden" => "true", "aria-labelledby" => "myModalLabel", :role => "dialog", :tabindex => "-1"}
+  .modal-dialog
+    .modal-content
+      .modal-header
+        %button.close{"aria-hidden" => "true", "data-dismiss" => "modal", :type => "button"}
+          \&times;
+        %h4#myModalLabel.modal-title
+          Note: This is fake data!
+      .modal-body
+        Since this is fake data that's not being updated, it has static dates. As time passes, the date-range calendar will continue to update but the data will not! So, if you want to see a good sample of data, we recommend you view 02/01/2014 - 03/01/2014.
+      .modal-footer
+        %button.btn.btn-primary{"data-dismiss" => "modal", :type => "button"}
+          Got it.
+
 .container
   .csv-container
     %h1.csv-h1.all-c All Campaigns
