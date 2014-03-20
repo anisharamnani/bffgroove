@@ -15,6 +15,9 @@ gem 'devise'
 gem 'haml'
 gem 'jbuilder'
 gem 'httparty'
+gem 'unicorn'
+gem 'capistrano'
+gem 'rvm-capistrano'
 
 group :development do
   gem 'sqlite3'
