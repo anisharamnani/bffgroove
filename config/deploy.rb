@@ -1,6 +1,9 @@
 require "bundler/capistrano"
 require "rvm/capistrano"
 
+set :whenever_command, "bundle exec whenever"
+require "whenever/capistrano"
+
 server "107.170.125.64", :web, :app, :db, primary: true
 
 set :application, "bffgroove"
