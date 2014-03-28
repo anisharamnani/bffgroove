@@ -63,5 +63,5 @@ end
 
 def run_interactively(command, server=nil)
   server ||= find_servers_for_task(current_task).first
-  exec %Q(ssh #{server.host} -t 'cd #{current_path} && #{command}')
+  exec %Q(ssh #{server.host} -p 2048 -t 'cd #{current_path} && #{command}')
 end
